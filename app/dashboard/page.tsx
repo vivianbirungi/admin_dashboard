@@ -1,10 +1,11 @@
 'use client'
 
+import { Flex } from "@chakra-ui/react";
 import Auth from "../../features/auth";
 const dashboard = () => {
   try {
     Auth.login({ phone: '07034568787' })
-      .then((response) => {
+      .then((response:any) => {
       
 
           console.log(response);
@@ -18,9 +19,14 @@ const dashboard = () => {
     console.log(error);
   }
   return (
-    <div>
-      dashboardComponent
-    </div>
+    <Flex
+    w={["100%", "100%", "60%", "60%", "55%"]}
+    p="3%"
+    flexDir="column"
+    overflow="auto"
+    minH="100vh">
+       
+   </Flex>
   )
 }
 
